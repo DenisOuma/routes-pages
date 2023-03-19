@@ -14,10 +14,10 @@ export const App = () => {
 				<Button>Success</Button>
 			</div>
 			<div>
-				<Button>Danger</Button>
+				<Button>Warning</Button>
 			</div>
 			<div>
-				<Button>Welcome</Button>
+				<Button>Danger</Button>
 			</div>
 		</div>
 	);

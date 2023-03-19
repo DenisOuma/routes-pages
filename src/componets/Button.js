@@ -1,5 +1,14 @@
 import React from "react";
 
-export const Button = ({ children }) => {
+export const Button = ({
+	children,
+	primary,
+	secondary,
+	success,
+	warning,
+	danger,
+	outline,
+	rounded,
+}) => {
 	return <button>{children}</button>;
 };
