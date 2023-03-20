@@ -5,19 +5,27 @@ export const App = () => {
 	return (
 		<div>
 			<div>
-				<Button>primary</Button>
+				<Button primary rounded outlined>
+					primary!
+				</Button>
 			</div>
 			<div>
-				<Button>Secondary</Button>
+				<Button secondary outlined rounded>
+					Secondary!
+				</Button>
 			</div>
 			<div>
-				<Button>Success</Button>
+				<Button warning>Warning!</Button>
 			</div>
 			<div>
-				<Button>Warning</Button>
+				<Button success outline>
+					Success!
+				</Button>
 			</div>
 			<div>
-				<Button>Danger</Button>
+				<Button danger rounded>
+					Danger!
+				</Button>
 			</div>
 		</div>
 	);
