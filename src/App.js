@@ -1,32 +1,20 @@
 import React from "react";
-import { Button } from "./componets/Button";
+import { Accordion } from "./componets/Accordion";
 
 export const App = () => {
-	return (
-		<div>
-			<div>
-				<Button primary rounded outlined>
-					primary!
-				</Button>
-			</div>
-			<div>
-				<Button secondary outlined rounded>
-					Secondary!
-				</Button>
-			</div>
-			<div>
-				<Button warning>Warning!</Button>
-			</div>
-			<div>
-				<Button success outline>
-					Success!
-				</Button>
-			</div>
-			<div>
-				<Button danger rounded>
-					Danger!
-				</Button>
-			</div>
-		</div>
-	);
+	const items = [
+		{
+			label: "Can I use react on  project?",
+			content: "Yes you can there is no issue about it.",
+		},
+		{
+			label: "Can I use javascript on  project?",
+			content: "Yes you can ther is no issue about it.",
+		},
+		{
+			label: "Can I use CSS on  project?",
+			content: "Yes you can ther is no issue about it.",
+		},
+	];
+	return <Accordion items={items} />;
 };

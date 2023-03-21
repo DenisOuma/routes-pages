@@ -1,6 +1,4 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import className from "classnames";
 export const Button = ({
 	children,
 	primary,
@@ -10,26 +8,32 @@ export const Button = ({
 	danger,
 	outline,
 	rounded,
-}) => {
-	const classes = classNames("px-3 py-1.5 border m-1.5", {
-		"bg-blue-500  border-blue-600  text-white": primary,
-		"bg-gray-900  border-gray-900  text-white": secondary,
-		"bg-green-500  border-green-500  text-white": success,
-		"bg-yellow-400  border-yellow-400  text-white": warning,
-		"bg-red-500  border-red-600  text-white": danger,
-		"rounded-full": rounded,
-		"bg-white": outline,
-		"text-blue-500": outline && primary,
-		"text-gray-900": outline && secondary,
-		"text-green-500": outline && success,
-		"text-yellow-400": outline && warning,
-		"text-red-500": outline && danger,
-	});
-	return <button className={classes}>{children}</button>;
-};
 
-Button.propTypes = {
-	checkVariationvalue: ({ primary, secondary, success, warning, danger }) => {
-		console.log(primary);
-	},
+	...rest
+}) => {
+	const classes = className(
+		rest.className,
+		"flex px-3 items-center py-1.5 m-1.5 border",
+		{
+			"border-blue-500 bg-blue-500 text-white": primary,
+			"border-gray-900 bg-gray-900 text-white": secondary,
+			"border-green-500 bg-green-500 text-white": success,
+			"border-yellow-400 bg-yellow-400 text-white": warning,
+			"bg-red-500 border-red-500  text-white": danger,
+			"rounded-full": rounded,
+			"bg-gray-900": outline,
+			"text-blue-900": outline && primary,
+			"text-gray-900": outline && secondary,
+			"text-green-900": success && outline,
+			"text-yellow-900": outline && warning,
+			"text-red-900": outline && danger,
+		}
+	);
+
+	console.log(rest);
+	return (
+		<button {...rest} className={classes}>
+			{children}
+		</button>
+	);
 };
