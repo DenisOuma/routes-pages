@@ -15,7 +15,7 @@ export const App = () => {
 	console.log(select);
 
 	return (
-		<div>
+		<div className="flex">
 			<DropDown
 				options={options}
 				value={select}
