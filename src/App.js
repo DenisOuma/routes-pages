@@ -1,27 +1,13 @@
-import React, { useState } from "react";
-import { DropDown } from "./componets/DropDown";
+import React from "react";
+import { Link } from "./componets/Link";
+import { DropDownPage } from "./componets/pages/DropDownPage";
+// import { DropDownPage } from "./componets/pages/DropDownPage";
 
 export const App = () => {
-	const [select, setSelect] = useState();
-	const options = [
-		{ lable: "red", value: "red" },
-		{ lable: "green", value: "green" },
-		{ lable: "blue", value: "blue" },
-	];
-
-	const handleSelect = (option) => {
-		setSelect(option);
-	};
-	console.log(select);
-
 	return (
 		<div className="flex">
-			<DropDown
-				options={options}
-				value={select}
-				lable={"Select... test"}
-				onChange={handleSelect}
-			/>
+			<DropDownPage />
+			<Link path="www.google.com" />
 		</div>
 	);
 };

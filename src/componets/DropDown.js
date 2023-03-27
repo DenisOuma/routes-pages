@@ -6,6 +6,9 @@ export const DropDown = ({ options, onChange, value, lable }) => {
 	const divEl = useRef();
 	useEffect(() => {
 		const handler = (e) => {
+			if (!divEl.current) {
+				return;
+			}
 			if (!divEl.current.contains(e.target)) {
 				setIsOpen(false);
 			}
