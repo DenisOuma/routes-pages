@@ -7,6 +7,7 @@ import { AccordinoPage } from "./componets/pages/AccordinoPage";
 import { ButtonPage } from "./componets/pages/ButtonPage";
 import { SideBar } from "./componets/SideBar";
 import { Modal } from "./componets/Modal";
+import { ModalPage } from "./componets/pages/ModalPage";
 
 export const App = () => {
 	return (
@@ -17,14 +18,14 @@ export const App = () => {
 				<Route path="/accordion">
 					<AccordinoPage />
 				</Route>
-				<Route path="/dropdown">
+				<Route path="/">
 					<DropDownPage />
 				</Route>
 				<Route path="/button">
 					<ButtonPage />
 				</Route>
 				<Route path="/modal">
-					<Modal />
+					<ModalPage />
 				</Route>
 			</div>
 		</div>
