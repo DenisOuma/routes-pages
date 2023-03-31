@@ -19,15 +19,14 @@ const NavigationProvider = ({ children }) => {
 		window.history.pushState({}, "", to);
 		setCurrentPath(to);
 	};
-	const stateToShare = {};
+	const stateToShare = {
+		currentPath,
+		navigate,
+	};
 
 	return (
 		<NavigationContext.Provider value={stateToShare}>
-			<div>
-				<button onClick={() => navigate("/accordion")}>Go to accordion</button>
-				<button onClick={() => navigate("/dropdown")}>Go to dropDown</button>
-			</div>
-			{currentPath}
+			{/* {currentPath} */}
 			{children}
 		</NavigationContext.Provider>
 	);
