@@ -24,9 +24,11 @@ export const TablesPage = () => {
 			score: "4",
 		},
 	];
+
+	const config = [{ label: "Fruits" }, { label: "Color" }, { label: "Score" }];
 	return (
 		<div>
-			<Table data={data} />
+			<Table data={data} config={config} />
 		</div>
 	);
 };
