@@ -6,6 +6,7 @@ export const SideBar = () => {
 		{ lable: "Accordion", path: "/accordion" },
 		{ lable: "Button", path: "/button" },
 		{ lable: "Modal", path: "/modal" },
+		{ lable: "Table", path: "/table" },
 	];
 
 	const sidebarOption = links.map((option, i) => (
