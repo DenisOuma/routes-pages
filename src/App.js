@@ -1,12 +1,9 @@
 import React from "react";
-import { Link } from "./componets/Link";
 import { Route } from "./componets/Route";
-import { Accordion } from "./componets/Accordion";
 import { DropDownPage } from "./componets/pages/DropDownPage";
 import { AccordinoPage } from "./componets/pages/AccordinoPage";
 import { ButtonPage } from "./componets/pages/ButtonPage";
 import { SideBar } from "./componets/SideBar";
-import { Modal } from "./componets/Modal";
 import { ModalPage } from "./componets/pages/ModalPage";
 import { TablesPage } from "./componets/pages/TablesPage";
 

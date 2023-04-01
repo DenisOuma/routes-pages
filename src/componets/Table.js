@@ -1,19 +1,19 @@
 import React from "react";
 
-export const Table = ({ data, config }) => {
+export const Table = ({ data, config, keyFn }) => {
 	const renderHead = config.map((head) => {
 		return <th key={head.label}>{head.label}</th>;
 	});
-	const renderedRows = data.map((fruit) => {
+	const renderedRows = data.map((rowData) => {
 		const renderedCells = config.map((column) => {
 			return (
 				<td className="p-2" key={column.label}>
-					{column.render(fruit)}
+					{column.render(rowData)}
 				</td>
 			);
 		});
 		return (
-			<tr className="border-b" key={fruit.name}>
+			<tr className="border-b" key={keyFn(rowData)}>
 				{renderedCells}
 			</tr>
 		);
